@@ -1,4 +1,4 @@
- /*
+/*
  * MAIN Generated Driver File
  * 
  * @file main.c
@@ -8,7 +8,7 @@
  * @brief This is the generated driver implementation file for the MAIN driver.
  *
  * @version MAIN Driver Version 1.0.0
-*/
+ */
 
 /*
 © [2024] Microchip Technology Inc. and its subsidiaries.
@@ -29,19 +29,19 @@
     TOTAL LIABILITY ON ALL CLAIMS RELATED TO THE SOFTWARE WILL NOT 
     EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
     THIS SOFTWARE.
-*/
+ */
 #include "mcc_generated_files/system/system.h"
+#include <util/delay.h> 
 
 /*
     Main application
-*/
+ */
 
-int main(void)
-{
+int main(void) {
     SYSTEM_Initialize();
 
-
-    while(1)
-    {
-    }    
+    while (1) {
+        PORTB ^= (1 << PB0);
+        _delay_ms(500);
+    }
 }
