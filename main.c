@@ -37,25 +37,29 @@
     Main application
  */
 
-static int i;
-volatile adc_result_t adc_result;
+static volatile adc_result_t adc_result;
 
-
-
+enum ADCS {
+    ADC_CHAN_0,
+    ADC_CHAN_1,
+    ADC_CHAN_2,
+    ADC_CHAN_3,
+    ADC_CHAN_4,
+    ADC_CHAN_5,
+    ADC_CHAN_6,
+    ADC_CHAN_7,
+    ADC_TEMPSENS = 0b1110,
+    ADC_VBG,
+    ADC_GND
+};
 
 int main(void) {
+
     SYSTEM_Initialize();
 
-    
-    ADC_Enable();
-    
-    i = 0;
-
     while (1) {
-        
         PORTB ^= (1 << PB1);
-        adc_result = ADC_GetConversion(5);
-        i += 1;
+        adc_result = ADC_GetConversion(ADC_CHAN_5);
         _delay_ms(500);
     }
 }
