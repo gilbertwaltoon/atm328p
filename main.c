@@ -76,8 +76,6 @@ int main(void) {
     
     SYSTEM_Initialize();
     
-   
-
     while (1) {
         PORTB ^= (1 << PB1);
         (void) UART_WriteString(message); 
