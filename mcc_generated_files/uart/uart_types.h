@@ -1,15 +1,13 @@
 /**
- * CONFIGURATION BITS Generated Driver Source File
+ * UART Generated Driver Interface Header File
  * 
- * @file config_bits.c
+ * @file uart_types.h
  * 
- * @ingroup config_bitsdriver
+ * @defgroup uart_types UART_TYPES
  * 
- * @brief This file contains the API implementation for the Configuration bits driver.
+ * @brief This file contains the API prototypes and other data types for the Universal Asynchronous Receiver and Transmitter (UART) module.
  *
- * @version Driver Version 1.0.0
-*
- * @version Package Version 1.0.2
+ * @version UART Driver Version 1.0.0
 */
 /*
 © [2024] Microchip Technology Inc. and its subsidiaries.
@@ -32,22 +30,52 @@
     THIS SOFTWARE.
 */
 
-/**
-   Section: Included Files
- */
-#include <avr/io.h>
+#ifndef UART_TYPES_H
+#define	UART_TYPES_H
 
 /**
- * Configures the Fuse bits.
- */
+  Section: Included Files
+*/
+#include <stdbool.h>
+#include <stdint.h>
 
-FUSES = 
-{
- .extended = 0x7, 
+#ifdef	__cplusplus
+extern "C" {
+#endif
 
- 
-.high = 0x9f ,
- 
-
-.low = 0xff 
+   
+/**
+  Section: Data Type Definitions
+*/ 
+      
+/**
+@ingroup uart_types
+@enum UART_STANDARD_BAUDS
+@brief This Enum can be used to set UART standard
+baud rate using \ref UARTx_BRGSet function e.g. \ref UART1_BRGSet.
+*/
+enum UART_STANDARD_BAUDS{
+UART_110 = 0,
+UART_300 = 1,
+UART_600 = 2,
+UART_1200 = 3,
+UART_2400 = 4,
+UART_4800 = 5,
+UART_9600 = 6,
+UART_14400 = 7,
+UART_19200 = 8,
+UART_38400 = 9,
+UART_57600 = 10,
+UART_115200 = 11,
+UART_230400 = 12,
+UART_460800 = 13,
+UART_921600 = 14,
 };
+
+
+#ifdef	__cplusplus
+}
+#endif
+
+#endif	/* UART_TYPES_H */
+

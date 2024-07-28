@@ -48,6 +48,7 @@ extern "C" {
 #include "../system/pins.h"
 #include "../adc/adc.h"
 #include "../system/cpuint.h"
+#include "../uart/usart0.h"
 #include "../system/cpu.h"
 /**
  * @ingroup systemdriver

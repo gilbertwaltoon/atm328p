@@ -44,6 +44,26 @@
  */
  ///@{
 
+//get/set IO_PD0 aliases
+#define IO_PD0_SetHigh() do { PORTD |= 0x1; } while(0)
+#define IO_PD0_SetLow() do { PORTD &= ~0x1; } while(0)
+#define IO_PD0_Toggle() do { PIND |= 0x1; } while(0)
+#define IO_PD0_GetValue() (PIND & (0x1 << 0))
+#define IO_PD0_SetDigitalInput() do { DDRD &= ~0x1; } while(0)
+#define IO_PD0_SetDigitalOutput() do { DDRD |= 0x1; } while(0)
+#define IO_PD0_SetPullUp() do { PORTD |= 0x1; } while(0)
+#define IO_PD0_ResetPullUp() do { PORTD &= ~0x1; } while(0)
+
+//get/set IO_PD1 aliases
+#define IO_PD1_SetHigh() do { PORTD |= 0x2; } while(0)
+#define IO_PD1_SetLow() do { PORTD &= ~0x2; } while(0)
+#define IO_PD1_Toggle() do { PIND |= 0x2; } while(0)
+#define IO_PD1_GetValue() (PIND & (0x1 << 1))
+#define IO_PD1_SetDigitalInput() do { DDRD &= ~0x2; } while(0)
+#define IO_PD1_SetDigitalOutput() do { DDRD |= 0x2; } while(0)
+#define IO_PD1_SetPullUp() do { PORTD |= 0x2; } while(0)
+#define IO_PD1_ResetPullUp() do { PORTD &= ~0x2; } while(0)
+
 //get/set IO_PC5 aliases
 #define IO_PC5_SetHigh() do { PORTC |= 0x20; } while(0)
 #define IO_PC5_SetLow() do { PORTC &= ~0x20; } while(0)

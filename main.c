@@ -32,6 +32,7 @@
  */
 #include "mcc_generated_files/system/system.h"
 #include <util/delay.h> 
+#include <string.h>
 
 /*
     Main application
@@ -53,13 +54,35 @@ enum ADCS {
     ADC_GND
 };
 
-int main(void) {
 
+
+void UART_WriteString(const char *message);
+
+void UART_WriteString(const char *message)
+{
+    for(int i = 0; i < (int)strlen(message); i++)
+    {
+        while(!USART0_IsTxReady())
+        {
+            ;
+        };
+        (void) UART0_Write(message[i]);
+    }
+}
+
+int main(void) {
+    
+    const char message[] = "Hi\r\n";
+    
     SYSTEM_Initialize();
+    
+   
 
     while (1) {
         PORTB ^= (1 << PB1);
+        (void) UART_WriteString(message); 
         adc_result = ADC_GetConversion(ADC_CHAN_5);
-        _delay_ms(500);
+        _delay_ms(2000);
     }
+    
 }
