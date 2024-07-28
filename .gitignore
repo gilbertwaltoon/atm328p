@@ -1,0 +1,57 @@
+#Taken from https://github.com/toptal/gitignore/blob/master/templates/MPLabX.gitignore
+#Licensed there under:
+#MIT License
+#
+#Copyright (c) 2017 Version Control System Fund
+#
+#Permission is hereby granted, free of charge, to any person obtaining a copy
+#of this software and associated documentation files (the "Software"), to deal
+#in the Software without restriction, including without limitation the rights
+#to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#copies of the Software, and to permit persons to whom the Software is
+#furnished to do so, subject to the following conditions:
+#
+#The above copyright notice and this permission notice shall be included in all
+#copies or substantial portions of the Software.
+#
+#THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#SOFTWARE.
+#
+#
+#Ignore List for Microchip's MPLAB X IDE
+#It's a form of NetBeans with vendor specific changes
+#Taken from zeha on GIST https://gist.github.com/zeha/5999375
+#Updated by Cristian Cristea (https://github.com/cristiancristea00)
+
+*.d
+*.pre
+*.p1
+*.lst
+*.sym
+*.obj
+*.o
+*.sdb
+*.obj.dmp
+*.mk
+*.map
+*.properties
+*.production
+*.debug
+html/
+nbproject/private/
+nbproject/Package-*.bash
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+funclist
+nbproject/Makefile-*
+disassembly/
+.generated_files/
