@@ -44,56 +44,6 @@
  */
  ///@{
 
-//get/set IO_PC0 aliases
-#define IO_PC0_SetHigh() do { PORTC |= 0x1; } while(0)
-#define IO_PC0_SetLow() do { PORTC &= ~0x1; } while(0)
-#define IO_PC0_Toggle() do { PINC |= 0x1; } while(0)
-#define IO_PC0_GetValue() (PINC & (0x1 << 0))
-#define IO_PC0_SetDigitalInput() do { DDRC &= ~0x1; } while(0)
-#define IO_PC0_SetDigitalOutput() do { DDRC |= 0x1; } while(0)
-#define IO_PC0_SetPullUp() do { PORTC |= 0x1; } while(0)
-#define IO_PC0_ResetPullUp() do { PORTC &= ~0x1; } while(0)
-
-//get/set IO_PC1 aliases
-#define IO_PC1_SetHigh() do { PORTC |= 0x2; } while(0)
-#define IO_PC1_SetLow() do { PORTC &= ~0x2; } while(0)
-#define IO_PC1_Toggle() do { PINC |= 0x2; } while(0)
-#define IO_PC1_GetValue() (PINC & (0x1 << 1))
-#define IO_PC1_SetDigitalInput() do { DDRC &= ~0x2; } while(0)
-#define IO_PC1_SetDigitalOutput() do { DDRC |= 0x2; } while(0)
-#define IO_PC1_SetPullUp() do { PORTC |= 0x2; } while(0)
-#define IO_PC1_ResetPullUp() do { PORTC &= ~0x2; } while(0)
-
-//get/set IO_PC2 aliases
-#define IO_PC2_SetHigh() do { PORTC |= 0x4; } while(0)
-#define IO_PC2_SetLow() do { PORTC &= ~0x4; } while(0)
-#define IO_PC2_Toggle() do { PINC |= 0x4; } while(0)
-#define IO_PC2_GetValue() (PINC & (0x1 << 2))
-#define IO_PC2_SetDigitalInput() do { DDRC &= ~0x4; } while(0)
-#define IO_PC2_SetDigitalOutput() do { DDRC |= 0x4; } while(0)
-#define IO_PC2_SetPullUp() do { PORTC |= 0x4; } while(0)
-#define IO_PC2_ResetPullUp() do { PORTC &= ~0x4; } while(0)
-
-//get/set IO_PC3 aliases
-#define IO_PC3_SetHigh() do { PORTC |= 0x8; } while(0)
-#define IO_PC3_SetLow() do { PORTC &= ~0x8; } while(0)
-#define IO_PC3_Toggle() do { PINC |= 0x8; } while(0)
-#define IO_PC3_GetValue() (PINC & (0x1 << 3))
-#define IO_PC3_SetDigitalInput() do { DDRC &= ~0x8; } while(0)
-#define IO_PC3_SetDigitalOutput() do { DDRC |= 0x8; } while(0)
-#define IO_PC3_SetPullUp() do { PORTC |= 0x8; } while(0)
-#define IO_PC3_ResetPullUp() do { PORTC &= ~0x8; } while(0)
-
-//get/set IO_PC4 aliases
-#define IO_PC4_SetHigh() do { PORTC |= 0x10; } while(0)
-#define IO_PC4_SetLow() do { PORTC &= ~0x10; } while(0)
-#define IO_PC4_Toggle() do { PINC |= 0x10; } while(0)
-#define IO_PC4_GetValue() (PINC & (0x1 << 4))
-#define IO_PC4_SetDigitalInput() do { DDRC &= ~0x10; } while(0)
-#define IO_PC4_SetDigitalOutput() do { DDRC |= 0x10; } while(0)
-#define IO_PC4_SetPullUp() do { PORTC |= 0x10; } while(0)
-#define IO_PC4_ResetPullUp() do { PORTC &= ~0x10; } while(0)
-
 //get/set IO_PC5 aliases
 #define IO_PC5_SetHigh() do { PORTC |= 0x20; } while(0)
 #define IO_PC5_SetLow() do { PORTC &= ~0x20; } while(0)
