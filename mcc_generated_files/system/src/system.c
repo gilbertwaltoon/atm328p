@@ -40,6 +40,7 @@ void SYSTEM_Initialize(void)
 {
     CPU_Initialize();
     PIN_MANAGER_Initialize();
+    ADC_Initialize();
     CPUINT_Initialize();
 }
 

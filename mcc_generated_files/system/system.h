@@ -46,6 +46,7 @@ extern "C" {
 #include "../system/utils/compiler.h"
 #include "config_bits.h"
 #include "../system/pins.h"
+#include "../adc/adc.h"
 #include "../system/cpuint.h"
 #include "../system/cpu.h"
 /**

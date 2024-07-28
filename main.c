@@ -37,11 +37,25 @@
     Main application
  */
 
+static int i;
+volatile adc_result_t adc_result;
+
+
+
+
 int main(void) {
     SYSTEM_Initialize();
 
+    
+    ADC_Enable();
+    
+    i = 0;
+
     while (1) {
-        PORTB ^= (1 << PB0);
+        
+        PORTB ^= (1 << PB1);
+        adc_result = ADC_GetConversion(5);
+        i += 1;
         _delay_ms(500);
     }
 }
